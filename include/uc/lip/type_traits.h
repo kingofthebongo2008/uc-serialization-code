@@ -59,12 +59,12 @@ namespace uc
         {
             static const constexpr bool value = std::is_union<t>::value;
         };
-
+		/*
         template <typename b, typename d> struct is_base_and_derived
         {
             static const constexpr bool value = std::is_base_and_derived<b, d>::value;
         };
-
+		*/
         template <typename t > struct alignment_of
         {
             static const constexpr size_t value = std::alignment_of<t>::value;
