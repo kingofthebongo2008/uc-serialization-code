@@ -14,7 +14,7 @@ namespace uc
 
             member_info_base(
                 const char*         name,
-                type_info::offset_t offset,
+                type_info::offset_t	offset,
                 type_info           type_info,
                 bool                is_smart_member = false,
                 bool                is_array = false,
@@ -91,7 +91,7 @@ namespace uc
 
         private:
             type_info               m_type_info;
-            const char*             m_name;
+            const char*		        m_name;
             type_info::offset_t     m_offset;
             uint32_t                m_flags;
             bool                    m_is_array;
@@ -216,7 +216,7 @@ namespace uc
 
             public:
 
-            member_info_typed_base(const char*  name, type_info::offset_t offset, bool is_smart_member = member_info_typed_base_traits<t>::is_smart_member, bool is_array = false, uint32_t flags = 0, uint32_t array_size = 0)
+            member_info_typed_base(const char*	name, type_info::offset_t offset, bool is_smart_member = member_info_typed_base_traits<t>::is_smart_member, bool is_array = false, uint32_t flags = 0, uint32_t array_size = 0)
                 : base(name, offset, make_type_info<t>(), is_smart_member, is_array, flags, array_size )
             {
 

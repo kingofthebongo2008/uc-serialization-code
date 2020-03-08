@@ -32,7 +32,7 @@ namespace uc
                 return m_type_info.name();
             }
 
-            type_info::offset_t offset() const
+            type_info::offset_t	offset() const
             {
                 return m_offset;
             }
