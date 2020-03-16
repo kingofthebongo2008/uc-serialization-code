@@ -97,11 +97,12 @@ namespace uc
             reloc_array<joint_bounding_volume> m_joint_bounding_volumes;    //bounding volume of the vertices affected by this bone in bind pose space
             
             uint16_t                           m_locomotion_joint_index;  
+#if defined(UC_TOOLS)
             skeleton()
             {
 
             }
-
+#endif
             skeleton(const lip::load_context& c) : 
                     m_joint_inverse_bind_pose(c)
                 ,   m_joint_inverse_bind_pose2(c)
@@ -112,6 +113,7 @@ namespace uc
                 ,   m_joint_linkage_indices(c)
                 ,   m_joint_local_transforms2(c)
                 ,   m_joint_linkage2(c)
+                ,   m_joint_bounding_volumes(c)
             {
 
             }
@@ -164,11 +166,12 @@ namespace uc
             reloc_array < joint_translation >   m_translation_keys;
             reloc_array < joint_time >          m_translation_times;
             joint_name                          m_joint_name;
-
+#if defined(UC_TOOLS)
             joint_animation()
             {
 
             }
+#endif
 
             joint_animation(const lip::load_context& c) : 
                     m_rotation_keys(c)
@@ -192,10 +195,12 @@ namespace uc
             double                          m_duration;
             double                          m_ticks_per_second;
 
+#if defined(UC_TOOLS)
             joint_animations()
             {
 
             }
+#endif
 
             joint_animations(const lip::load_context& c ) : m_joint_animations(c)
             {
