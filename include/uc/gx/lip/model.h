@@ -840,6 +840,28 @@ namespace uc
 
         LIP_DECLARE_TYPE_ID(uc::lip::normal_multi_textured_model)
 
+        struct derivatives_multi_material_model : public derivatives_parametrized_model
+        {
+            using base = derivatives_parametrized_model;
+
+            lip::reloc_array < primitive_range >     m_primitive_ranges;
+
+            explicit derivatives_multi_material_model(const lip::load_context& c) : base(c)
+                , m_textures(c)
+                , m_primitive_ranges(c)
+            {
+
+            }
+
+#if defined(UC_TOOLS)
+            derivatives_multi_material_model() {}
+#endif
+
+            LIP_DECLARE_RTTI()
+        };
+
+        LIP_DECLARE_TYPE_ID(uc::lip::derivatives_multi_material_model)
+
         struct derivatives_multi_textured_model : public derivatives_parametrized_model
         {
             using base = derivatives_parametrized_model;
@@ -930,6 +952,28 @@ namespace uc
         };
 
         LIP_DECLARE_TYPE_ID(uc::lip::derivatives_skinned_model)
+
+        struct derivatives_skinned_multi_material_model : public derivatives_multi_material_model
+        {
+            using base = derivatives_multi_textured_model;
+
+            lip::reloc_array < float4 >          m_blend_weights;
+            lip::reloc_array < ubyte4 >          m_blend_indices;
+
+            explicit derivatives_skinned_multi_material_model(const lip::load_context& c) : base(c)
+                , m_blend_weights(c)
+                , m_blend_indices(c)
+            {
+
+            }
+
+#if defined(UC_TOOLS)            
+            derivatives_skinned_multi_material_model() {}
+#endif
+            LIP_DECLARE_RTTI()
+        };
+
+        LIP_DECLARE_TYPE_ID(uc::lip::derivatives_skinned_multi_material_model)
 
     }
 }
