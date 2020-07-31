@@ -136,8 +136,8 @@ namespace uc
 
         LIP_BEGIN_DEFINE_RTTI(derivatives_skinned_multi_material_model)
             LIP_RTTI_BASE_CLASS(derivatives_multi_material_model)
-            LIP_RTTI_MEMBER(derivatives_skinned_model, m_blend_weights)
-            LIP_RTTI_MEMBER(derivatives_skinned_model, m_blend_indices)
+            LIP_RTTI_MEMBER(derivatives_skinned_multi_material_model, m_blend_weights)
+            LIP_RTTI_MEMBER(derivatives_skinned_multi_material_model, m_blend_indices)
         LIP_END_DEFINE_RTTI(derivatives_skinned_multi_material_model)
     }
 }

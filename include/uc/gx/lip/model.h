@@ -847,7 +847,6 @@ namespace uc
             lip::reloc_array < primitive_range >     m_primitive_ranges;
 
             explicit derivatives_multi_material_model(const lip::load_context& c) : base(c)
-                , m_textures(c)
                 , m_primitive_ranges(c)
             {
 
@@ -955,7 +954,7 @@ namespace uc
 
         struct derivatives_skinned_multi_material_model : public derivatives_multi_material_model
         {
-            using base = derivatives_multi_textured_model;
+            using base = derivatives_multi_material_model;
 
             lip::reloc_array < float4 >          m_blend_weights;
             lip::reloc_array < ubyte4 >          m_blend_indices;
