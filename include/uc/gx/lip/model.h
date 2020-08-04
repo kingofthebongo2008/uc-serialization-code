@@ -31,6 +31,7 @@ namespace uc
         LIP_DECLARE_TYPE_ID(uc::lip::reloc_array < float8a >)
 
         LIP_DECLARE_TYPE_ID(uc::lip::reloc_array < float8 >)
+        LIP_DECLARE_TYPE_ID(uc::lip::reloc_array < ubyte8 >)
 
         struct indices
         {
@@ -956,8 +957,8 @@ namespace uc
         {
             using base = derivatives_multi_material_model;
 
-            lip::reloc_array < float4 >          m_blend_weights;
-            lip::reloc_array < ubyte4 >          m_blend_indices;
+            lip::reloc_array < float8 >          m_blend_weights;
+            lip::reloc_array < ubyte8 >          m_blend_indices;
 
             explicit derivatives_skinned_multi_material_model(const lip::load_context& c) : base(c)
                 , m_blend_weights(c)

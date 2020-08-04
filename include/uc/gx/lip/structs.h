@@ -104,5 +104,22 @@ namespace uc
         };
 
         LIP_DECLARE_TYPE_ID(uc::lip::float8)
+
+        struct ubyte8
+        {
+            uint8_t m_x;
+            uint8_t m_y;
+            uint8_t m_z;
+            uint8_t m_w;
+
+            uint8_t m_a;
+            uint8_t m_b;
+            uint8_t m_c;
+            uint8_t m_d;
+
+            LIP_DECLARE_RTTI()
+        };
+
+        LIP_DECLARE_TYPE_ID(uc::lip::ubyte8)
     }
 }

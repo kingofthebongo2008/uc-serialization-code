@@ -73,5 +73,19 @@ namespace uc
                 LIP_RTTI_MEMBER(float8, m_d)
 
             LIP_END_DEFINE_RTTI(float8)
+
+            LIP_BEGIN_DEFINE_RTTI(ubyte8)
+
+                LIP_RTTI_MEMBER(ubyte8, m_x)
+                LIP_RTTI_MEMBER(ubyte8, m_y)
+                LIP_RTTI_MEMBER(ubyte8, m_z)
+                LIP_RTTI_MEMBER(ubyte8, m_w)
+
+                LIP_RTTI_MEMBER(ubyte8, m_a)
+                LIP_RTTI_MEMBER(ubyte8, m_b)
+                LIP_RTTI_MEMBER(ubyte8, m_c)
+                LIP_RTTI_MEMBER(ubyte8, m_d)
+
+            LIP_END_DEFINE_RTTI(float8)
         }
 }
