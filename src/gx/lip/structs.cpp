@@ -86,6 +86,6 @@ namespace uc
                 LIP_RTTI_MEMBER(ubyte8, m_c)
                 LIP_RTTI_MEMBER(ubyte8, m_d)
 
-            LIP_END_DEFINE_RTTI(float8)
+            LIP_END_DEFINE_RTTI(ubyte8)
         }
 }
